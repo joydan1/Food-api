@@ -138,6 +138,10 @@ fetchMealsBtn.addEventListener("click", () => {
     showFeedbackPopup(" Please enter a valid positive number of meals.");
     return;
   }
+  if (count > 30) {
+    showFeedbackPopup("You can only fetch a maximum of 30 meals.");
+    return;
+  }
 
   fetchRandomMeals(count);
 });
